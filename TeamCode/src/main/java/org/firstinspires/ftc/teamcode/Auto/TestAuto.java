@@ -41,6 +41,7 @@ public class TestAuto extends OpMode {
     private Path park2(){
         return line(scorePose, park2).linear(scorePose, park2);
     }
+
     private Command autoRoutine() {
         return sequential(
                 follow(follower, startToScore()),
