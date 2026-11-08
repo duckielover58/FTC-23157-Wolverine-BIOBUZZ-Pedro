@@ -11,11 +11,16 @@ import com.qualcomm.hardware.gobilda.GoBildaPinpointDriver;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class Constants {
     public static Follower create(HardwareMap h) {
-        // return new Follower(Drivetrain, Localizer, Foresight);
+        return new Follower(
+                new com.pedropathing.localizers.PinpointLocalizer(h, localizerConfig),
+                new com.pedropathing.drivetrains.Mecanum(h, drivetrainConfig),
+                new com.pedropathing.algorithm.Foresight(foresightConfig)
+        );
         return null;
     }
 
