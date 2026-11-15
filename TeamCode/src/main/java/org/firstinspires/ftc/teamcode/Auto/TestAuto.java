@@ -56,10 +56,12 @@ public class TestAuto extends OpMode {
         follower.setPose(startPose);
         follower.update();
     }
+
     @Override
     public void start() {
         schedule(autoRoutine());
     }
+
     @Override
     public void loop() {
         follower.update();
