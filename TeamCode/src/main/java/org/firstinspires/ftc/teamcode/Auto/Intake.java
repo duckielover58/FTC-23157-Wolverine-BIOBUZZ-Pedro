@@ -8,7 +8,7 @@ import static com.pedropathing.ivy.commands.Commands.instant;
 
 public class Intake {
     private final DcMotorEx intake;
-    public double intakePower = 1.0;
+    public double intakePower = 0.6;
 
     public Intake (HardwareMap hardwareMap) {
         intake = hardwareMap.get(DcMotorEx.class, "Intake");
